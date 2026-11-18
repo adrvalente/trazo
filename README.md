@@ -1,5 +1,9 @@
-# Quadro V0.3.3.1 — Correção do painel lateral
+# Quadro V0.3.3.2 — Cabeçalho compacto
 
-Correção de regressão da V0.3.3: o botão × fecha agora o painel em desktop e dispositivos móveis. O botão ☰ reabre-o em ambos os modos. O painel é ocultado por defeito em ecrãs até 900px e aparece como sobreposição quando aberto. A tecla Escape e o fundo escurecido fecham-no em dispositivos móveis.
+- Nome do quadro, Fundo e Cor transferidos para o cabeçalho superior.
+- Removida a segunda barra horizontal para aumentar a área de desenho.
+- Em ecrãs estreitos, os controlos passam para a segunda linha **dentro do mesmo cabeçalho**.
+- IDs dos elementos e `app.js` preservados, mantendo desenho, touch, exportações e armazenamento.
+- Base: V0.3.3.1 (inclui correção do painel lateral).
 
-O motor de desenho `app.js`, o formato de armazenamento e as ferramentas existentes foram preservados. Publicação: copiar os ficheiros para a raiz do repositório GitHub Pages. Recomenda-se backup JSON antes da atualização.
+Abrir `index.html` ou publicar estes ficheiros no GitHub Pages. Fazer backup JSON antes de atualizar.
