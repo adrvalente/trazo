@@ -1,26 +1,25 @@
-# Quadro V0.1
+# Quadro V0.2 — Touch & Notes
 
-Protótipo de quadro digital, pensado para ecrãs táteis e GitHub Pages.
+Aplicação web estática (HTML, CSS e JavaScript) para desenhar e tomar notas em dispositivos touch.
 
 ## Testar
 
-Abra `index.html` num browser moderno. Para publicar no GitHub Pages, coloque os três ficheiros na raiz do repositório e ative Pages (Deploy from a branch).
+Abre `index.html` num browser moderno ou publica os ficheiros na raiz de um repositório com GitHub Pages (Settings > Pages > Deploy from a branch > main / root).
 
-## Funcionalidades
+## Novidades V0.2
 
-- Desenho com dedo, rato ou caneta digital (Pointer Events)
-- Caneta, marcador, borracha e mão para mover
-- Cores e espessura ajustável
-- Pinch-to-zoom com dois dedos
-- Desfazer/refazer e limpar com confirmação
-- Vários quadros com nomes editáveis
-- Gravação automática no `localStorage` do browser
-- Exportação PNG e ecrã completo
+- Notas adesivas e caixas de texto: seleciona a ferramenta e toca no quadro; no modo Mão, toca para editar ou arrasta para mover.
+- Formas: retângulo, elipse e linha.
+- Fundos: pontilhado, liso, quadriculado e pautado; temas claro e escuro.
+- Exportação PNG, backup JSON e importação JSON.
+- Menu de quadros acessível em tablets e telemóveis.
+- Migração automática dos quadros da V0.1 guardados no mesmo domínio e browser.
 
-## Limitações V0.1
+## Limitações atuais
 
-Ainda não inclui login, sincronização cloud, notas de texto nem colaboração. Os quadros ficam apenas no browser/dispositivo atual. Limpar os dados do site pode apagar os quadros. Recomenda-se exportar os desenhos importantes. O modo offline depende de o browser manter os recursos em cache; não existe ainda service worker.
-
-## Próxima fase
-
-Autenticação por email e palavra-passe com Supabase Auth, armazenamento por utilizador com RLS e sincronização cloud. Nunca guardar passwords no código do GitHub Pages.
+- Ainda sem login nem sincronização; os dados são guardados em localStorage no dispositivo.
+- Desfazer/refazer abrange criação de elementos e traços; alterações a notas existentes e movimentos não entram no histórico.
+- Exportação PNG usa fundo liso e recorta ao conteúdo; o padrão de fundo não é incluído.
+- Importar backup substitui os quadros existentes: exporta primeiro um backup.
+- Desenho com dedo e caneta; rejeição de palma depende do dispositivo/browser.
+- Sem service worker: para uso offline é necessário que os ficheiros estejam disponíveis localmente.
