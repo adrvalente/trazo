@@ -1,20 +1,5 @@
-# Quadro V0.3.3 — Navegação e gestão de quadros
+# Quadro V0.3.3.1 — Correção do painel lateral
 
-Evolução da V0.3.2 com interface Minimalista Premium, índigo #6366F1 e tema automático.
+Correção de regressão da V0.3.3: o botão × fecha agora o painel em desktop e dispositivos móveis. O botão ☰ reabre-o em ambos os modos. O painel é ocultado por defeito em ecrãs até 900px e aparece como sobreposição quando aberto. A tecla Escape e o fundo escurecido fecham-no em dispositivos móveis.
 
-## Novidades
-- Pesquisa de quadros em tempo real no painel lateral.
-- Alternância entre ordem original e ordenação alfabética (apenas visual).
-- Contador de quadros e estado vazio de pesquisa.
-- Botão de novo quadro no painel.
-- Painel móvel com fundo de sobreposição, fecho ao tocar fora ou premir Escape.
-- Atalho Ctrl+K / Cmd+K para abrir a pesquisa de quadros (fora de campos de edição).
-- Realce do quadro ativo e áreas de toque maiores.
-
-## Compatibilidade
-- `app.js` é idêntico ao da V0.3.2: motor de desenho, funcionalidades e formato dos dados preservados.
-- Funciona estaticamente em GitHub Pages, sem backend.
-- Dados guardados localmente no mesmo browser/origem; fazer backup JSON antes de atualizar.
-
-## Testes recomendados
-Abrir quadros, pesquisar, ordenar, criar, apagar, fechar painel com Escape ou toque exterior, testar em tablet e telemóvel.
+O motor de desenho `app.js`, o formato de armazenamento e as ferramentas existentes foram preservados. Publicação: copiar os ficheiros para a raiz do repositório GitHub Pages. Recomenda-se backup JSON antes da atualização.

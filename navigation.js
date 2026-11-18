@@ -5,7 +5,11 @@
  const count=document.getElementById('boardCount'),empty=document.getElementById('boardsEmpty');
  const trigger=document.getElementById('sidebarBtn'),close=document.getElementById('collapseBtn');
  let alphabetical=false;
- const setExpanded=()=>trigger.setAttribute('aria-expanded',String(sidebar.classList.contains('open')));
+ const mobile=()=>window.matchMedia('(max-width:900px)').matches;
+ const isVisible=()=>mobile()?sidebar.classList.contains('open'):!sidebar.classList.contains('is-collapsed');
+ const setExpanded=()=>{trigger.setAttribute('aria-expanded',String(isVisible()));trigger.title=isVisible()?'Ocultar quadros':'Mostrar quadros';};
+ const hideSidebar=()=>{sidebar.classList.remove('open');sidebar.classList.add('is-collapsed');setExpanded();};
+ const showSidebar=()=>{sidebar.classList.remove('is-collapsed');if(mobile())sidebar.classList.add('open');setExpanded();};
  const apply=()=>{
   const items=[...list.children],query=search.value.trim().toLocaleLowerCase('pt-PT');
   let visible=0;
@@ -25,18 +29,21 @@
  search.addEventListener('input',apply);
  sort.addEventListener('click',()=>{alphabetical=!alphabetical;sort.textContent=alphabetical?'Recentes ↕':'A–Z ↕';sort.title=alphabetical?'Mostrar pela ordem original':'Ordenar alfabeticamente';apply();});
  document.getElementById('sidebarNew').addEventListener('click',()=>{document.getElementById('newBtn').click();search.value='';apply();});
- document.getElementById('sidebarClose').addEventListener('click',()=>{sidebar.classList.remove('open');setExpanded();trigger.focus()});
- trigger.addEventListener('click',setExpanded);close.addEventListener('click',setExpanded);
+ document.getElementById('sidebarClose').addEventListener('click',()=>{hideSidebar();trigger.focus()});
+ // Substituir os handlers legados da V0.3 sem alterar o motor de desenho.
+ trigger.onclick=()=>{if(isVisible())hideSidebar();else showSidebar();};
+ close.onclick=()=>{hideSidebar();trigger.focus();};
+ window.addEventListener('resize',()=>{if(!mobile())sidebar.classList.remove('open');setExpanded();});
  list.addEventListener('click',()=>queueMicrotask(setExpanded));
  document.addEventListener('keydown',e=>{
-  if(e.key==='Escape'&&sidebar.classList.contains('open')){sidebar.classList.remove('open');setExpanded();trigger.focus()}
+  if(e.key==='Escape'&&mobile()&&sidebar.classList.contains('open')){hideSidebar();trigger.focus()}
   if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){
    const t=e.target;if(t.closest('input,textarea,[contenteditable]'))return;
-   e.preventDefault();sidebar.classList.add('open');setExpanded();search.focus();
+   e.preventDefault();showSidebar();search.focus();
   }
  });
  const backdrop=document.createElement('button');backdrop.type='button';backdrop.className='sidebar-backdrop';backdrop.setAttribute('aria-label','Fechar lista de quadros');
  document.querySelector('main').append(backdrop);
- backdrop.addEventListener('click',()=>{sidebar.classList.remove('open');setExpanded()});
+ backdrop.addEventListener('click',hideSidebar);
  setExpanded();apply();
 })();

@@ -78,3 +78,17 @@ body{background:var(--ui-bg)}header{height:68px;background:var(--ui-panel);borde
  .sidebar-shortcuts button{min-height:46px}
 }
 @media(min-width:901px){#sidebarClose{display:none}}
+
+/* V0.3.3.1 — painel lateral: estados explícitos e responsivos */
+@media (min-width:901px){
+ #sidebar.is-collapsed{display:none!important}
+ #sidebarBtn{display:inline-flex!important;align-items:center;justify-content:center}
+}
+@media (max-width:900px){
+ #sidebar{display:none!important;position:absolute;top:0;bottom:0;left:0}
+ #sidebar.open{display:flex!important}
+ #sidebar.is-collapsed{display:none!important}
+ #sidebarBtn{display:inline-flex!important;align-items:center;justify-content:center}
+}
+#collapseBtn{min-width:40px;min-height:40px;display:grid;place-items:center;border-radius:10px}
+#collapseBtn:hover{background:var(--ui-hover);color:var(--ui-accent)}
