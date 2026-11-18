@@ -108,3 +108,23 @@ header{display:flex;align-items:center;gap:14px;min-height:68px;height:auto;padd
 @media(max-width:1100px){header{flex-wrap:wrap;row-gap:3px}.brand{order:0}.header-actions{order:1;margin-left:auto}.header-board{order:2;flex:1 0 100%;margin-left:0;padding:0 2px 3px}.header-board #boardTitle{max-width:none}.header-board .head-controls label{font-size:12px}.header-board .head-controls select{max-width:115px}header{min-height:60px}}
 @media(max-width:680px){header{height:auto;min-height:60px;padding:6px 9px;row-gap:2px}.header-board{gap:5px}.header-board #boardTitle{font-size:14px;padding:7px 4px;min-width:75px}.header-board .head-controls{gap:3px}.header-board .head-controls label{font-size:0}.header-board .head-controls select{max-width:84px;padding:7px 4px;font-size:12px}.header-actions{gap:0}}
 @media(max-width:380px){.header-board .head-controls select{max-width:69px}.header-board #boardTitle{min-width:55px}}
+
+/* V0.3.4 — Modo de concentração, sem alterar o motor de desenho */
+.focus-controls{display:none;position:absolute;z-index:30;top:12px;right:14px;gap:8px;align-items:center}
+.focus-controls button{background:var(--ui-panel);color:var(--ui-text);border:1px solid var(--ui-line);box-shadow:var(--ui-shadow);border-radius:12px;padding:10px 13px;min-height:44px;white-space:nowrap}
+.focus-controls button:hover{color:var(--ui-accent);background:var(--ui-hover)}
+body.focus-mode header{display:none!important}
+body.focus-mode #sidebar{display:none!important}
+body.focus-mode .sidebar-backdrop{display:none!important}
+body.focus-mode #workspace{flex:1;min-width:0}
+body.focus-mode #tip{display:none!important}
+body.focus-mode .focus-controls{display:flex}
+body.focus-mode .tool-categories{display:none!important}
+body.focus-mode .toolbar{display:none!important}
+body.focus-mode .zoom-tools{bottom:20px;right:16px}
+body.focus-mode.focus-tools-open .toolbar{display:flex!important;bottom:16px}
+body.focus-mode.focus-tools-open .tool-categories{display:flex!important}
+body.focus-mode.focus-tools-open .zoom-tools{bottom:100px}
+body.focus-mode #stage{border-top:0}
+@media(max-width:900px){body.focus-mode.focus-tools-open .toolbar{display:flex!important}body.focus-mode.focus-tools-open .tool-categories{display:flex!important}body.focus-mode.focus-tools-open .zoom-tools{bottom:145px}}
+@media(max-width:560px){.focus-controls{top:8px;right:8px;gap:4px}.focus-controls button{padding:8px 10px;font-size:12px;min-height:44px}body.focus-mode.focus-tools-open .zoom-tools{bottom:140px}}
