@@ -145,3 +145,28 @@ html[data-pref-tips="off"] #tip{display:none!important}
 html[data-pref-status="off"] #saveStatus{display:none!important}
 html[data-pref-zoom="off"] .zoom-tools{display:none!important}
 @media(max-width:680px){.settings-head{padding:16px}.settings-body{padding:14px}.settings-footer{padding:14px}.settings-row{align-items:start;flex-direction:column}.settings-row select{width:100%}}
+
+/* V0.3.5.2 — Smart Toolbar */
+.smart-toolbar-shell{position:absolute;z-index:7;bottom:20px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;max-width:calc(100% - 185px)}
+.smart-toolbar-shell .toolbar{position:static;transform:none;left:auto;bottom:auto;max-width:100%;width:auto;overflow-x:auto;flex:0 1 auto}
+.smart-toolbar-actions{display:flex;gap:6px;flex-shrink:0;background:var(--ui-panel);border:1px solid var(--ui-line);border-radius:16px;padding:6px;box-shadow:var(--ui-shadow)}
+.smart-toolbar-actions button{border-radius:10px;background:transparent;color:var(--ui-text);padding:9px 12px;min-height:42px;white-space:nowrap}
+.smart-toolbar-actions button:hover,.smart-toolbar-actions button[aria-expanded="true"]{background:var(--ui-active);color:var(--ui-accent)}
+.smart-panel{position:absolute;bottom:calc(100% + 12px);right:0;min-width:270px;max-width:min(95vw,380px);background:var(--ui-panel);border:1px solid var(--ui-line);border-radius:16px;box-shadow:var(--ui-shadow);padding:14px;color:var(--ui-text)}
+.smart-panel[hidden]{display:none!important}
+.smart-panel-title{display:flex;justify-content:space-between;align-items:center;font-weight:650;margin-bottom:13px;font-size:14px}
+.smart-panel-title button{background:transparent;color:var(--ui-muted);font-size:23px;min-width:32px;min-height:32px}
+#smartStyleSlot{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+#smartStyleSlot #colors{display:flex;flex-wrap:wrap;gap:12px}
+#smartStyleSlot .size-label{display:flex;width:100%;justify-content:space-between}
+#smartStyleSlot .size-label input{width:185px;max-width:70%}
+#smartEditSlot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+#smartEditSlot button{min-height:46px;border-radius:10px;background:var(--ui-bg);color:var(--ui-text);font-size:21px}
+#smartEditSlot button:hover{background:var(--ui-active);color:var(--ui-accent)}
+@media(max-width:1100px){.smart-toolbar-shell{max-width:calc(100% - 18px);left:50%}}
+@media(max-width:900px){.smart-toolbar-shell{left:50%;bottom:10px;max-width:calc(100% - 16px);width:max-content;gap:0}.smart-toolbar-shell .toolbar{bottom:auto;max-width:calc(100vw - 16px);width:max-content;min-height:56px;overflow-x:auto}.smart-toolbar-actions{display:none}.smart-panel{display:none!important}}
+@media(max-width:560px){.smart-toolbar-shell{left:6px;transform:none;width:calc(100% - 12px)}.smart-toolbar-shell .toolbar{width:100%;max-width:100%}}
+body.focus-mode .smart-toolbar-shell{display:none!important}
+body.focus-mode.focus-tools-open .smart-toolbar-shell{display:flex!important;bottom:16px}
+body.focus-mode.focus-tools-open .toolbar{display:flex!important}
+@media(max-width:900px){body.focus-mode.focus-tools-open .smart-toolbar-shell{bottom:10px}}

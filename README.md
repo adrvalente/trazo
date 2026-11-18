@@ -1,16 +1,16 @@
-# Quadro V0.3.5 — Personalização & Preferências
+# Quadro V0.3.5.2 — Barra inteligente
 
-Base: V0.3.4. Aplicação estática para GitHub Pages.
+Evolução da V0.3.5, com motor de desenho `app.js` inalterado.
 
-## Novidades
-- Painel ⚙ Preferências (tema automático/claro/escuro, destaque índigo/azul/verde/grafite).
-- Tamanho normal ou grande dos controlos, adequado a touch.
-- Mostrar/ocultar dicas, estado de gravação e zoom.
-- Repor predefinições; preferências guardadas localmente e separadas dos quadros.
-- Migração da preferência de tema anterior.
+## Alterações
+- Desktop: ferramentas principais visíveis; cores/espessura no botão **Estilo**, ações avançadas no botão **Editar**.
+- Tablet/telemóvel (até 900 px): mantém as quatro categorias touch e respetivas ferramentas da V0.3.5.
+- Os botões originais são movidos entre a barra e os painéis, preservando IDs e listeners.
+- Menus fecham ao tocar fora ou premir Esc.
+- Compatível com GitHub Pages, sem serviços externos.
+
+## Testes sugeridos
+Testar cores, espessura, duplicar, bloquear, apagar, Undo/Redo, mudança de largura de janela, modo Focus e armazenamento local.
 
 ## Publicação
-Copiar os ficheiros para a raiz do repositório GitHub Pages. Abrir index.html localmente para teste.
-
-## Notas
-O motor de desenho app.js é idêntico ao da V0.3.4. Os quadros existentes não são apagados pelas preferências. Fazer backup JSON antes de atualizar. Não existe ainda login/sincronização; reservados para V0.4.
+Publicar os ficheiros desta pasta na raiz do repositório GitHub Pages. Fazer backup JSON antes de atualizar.
