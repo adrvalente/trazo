@@ -1,17 +1,20 @@
-# Quadro V0.3.2 — Barra de ferramentas responsiva
+# Quadro V0.3.3 — Navegação e gestão de quadros
 
-Mantém o motor de desenho `app.js` da V0.3.1, sem alterações.
+Evolução da V0.3.2 com interface Minimalista Premium, índigo #6366F1 e tema automático.
 
 ## Novidades
-- Até 900 px, barra organizada em quatro categorias: Desenhar, Inserir, Editar, Estilo.
-- Botões maiores para toque, barra com scroll horizontal dentro de cada categoria.
-- Zoom reposicionado para não sobrepor a barra.
-- Menu «⋯» no cabeçalho para aceder a Importar, Backup, PDF e PNG em ecrãs pequenos.
-- Desktop mantém a barra completa da V0.3.1.
-- Tema automático/Índigo, armazenamento local, exportação e compatibilidade GitHub Pages preservados.
+- Pesquisa de quadros em tempo real no painel lateral.
+- Alternância entre ordem original e ordenação alfabética (apenas visual).
+- Contador de quadros e estado vazio de pesquisa.
+- Botão de novo quadro no painel.
+- Painel móvel com fundo de sobreposição, fecho ao tocar fora ou premir Escape.
+- Atalho Ctrl+K / Cmd+K para abrir a pesquisa de quadros (fora de campos de edição).
+- Realce do quadro ativo e áreas de toque maiores.
 
-## Testar
-Abra `index.html` ou publique os ficheiros no GitHub Pages. Faça backup JSON antes de substituir uma versão anterior. Teste os quatro separadores em telemóvel/tablet, gestos touch, e menu ⋯.
+## Compatibilidade
+- `app.js` é idêntico ao da V0.3.2: motor de desenho, funcionalidades e formato dos dados preservados.
+- Funciona estaticamente em GitHub Pages, sem backend.
+- Dados guardados localmente no mesmo browser/origem; fazer backup JSON antes de atualizar.
 
-## Limites
-Login e sincronização não incluídos; reservados para V0.4.
+## Testes recomendados
+Abrir quadros, pesquisar, ordenar, criar, apagar, fechar painel com Escape ou toque exterior, testar em tablet e telemóvel.
