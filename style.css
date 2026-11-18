@@ -4,3 +4,48 @@
 
 /* V0.3 */
 .toolbar [data-tool="select"]{color:#c5b6ff}#duplicateBtn,#frontBtn,#backBtn,#lockBtn,#deleteBtn{font-size:19px}.toolbar{max-width:calc(100% - 185px)}@media(max-width:900px){.toolbar{max-width:calc(100% - 14px)}}
+
+/* V0.3.1 Minimalista Premium — interface only. Drawing engine unchanged. */
+:root{color-scheme:light;--ui-bg:#f7f8fb;--ui-panel:#fff;--ui-canvas:#f4f5f9;--ui-text:#1d2331;--ui-muted:#7b8495;--ui-line:#e7e9f0;--ui-hover:#f0efff;--ui-accent:#6366f1;--ui-active:#eeedff;--ui-shadow:0 12px 36px #1b244018;background:var(--ui-bg);color:var(--ui-text)}
+@media(prefers-color-scheme:dark){:root:not([data-ui-theme="light"]){color-scheme:dark;--ui-bg:#14171e;--ui-panel:#1e222d;--ui-canvas:#181c25;--ui-text:#f0f1f7;--ui-muted:#a0a7b6;--ui-line:#353b49;--ui-hover:#35334f;--ui-active:#35345b;--ui-shadow:0 12px 36px #0005}}
+:root[data-ui-theme="dark"]{color-scheme:dark;--ui-bg:#14171e;--ui-panel:#1e222d;--ui-canvas:#181c25;--ui-text:#f0f1f7;--ui-muted:#a0a7b6;--ui-line:#353b49;--ui-hover:#35334f;--ui-active:#35345b;--ui-shadow:0 12px 36px #0005}
+:root[data-ui-theme="light"]{color-scheme:light;--ui-bg:#f7f8fb;--ui-panel:#fff;--ui-canvas:#f4f5f9;--ui-text:#1d2331;--ui-muted:#7b8495;--ui-line:#e7e9f0;--ui-hover:#f0efff;--ui-active:#eeedff;--ui-shadow:0 12px 36px #1b244018}
+body{background:var(--ui-bg)}header{height:68px;background:var(--ui-panel);border-bottom:1px solid var(--ui-line);padding:0 20px;gap:12px}.mark{background:#191d2a;color:white;border-radius:13px;font-size:25px;box-shadow:0 4px 14px #15192a1a}.brand strong{font-size:18px;letter-spacing:-.5px}.brand small{color:var(--ui-muted);font-size:11px}.header-actions{gap:6px;min-width:0}.header-actions button{background:transparent;color:var(--ui-text);border:1px solid transparent;border-radius:11px;min-height:42px;padding:9px 12px;font-weight:550}.header-actions button:hover,.toolbar button:hover{background:var(--ui-hover);color:var(--ui-accent)}#newBtn{background:var(--ui-accent);color:white;border-color:var(--ui-accent)}#newBtn:hover{background:#5053d7;color:white}#saveStatus{color:var(--ui-muted);margin-right:6px;font-size:11px}aside{background:var(--ui-panel);border-right:1px solid var(--ui-line);width:224px;padding:20px 10px}.side-head{color:var(--ui-muted);letter-spacing:1px}.side-head button{color:var(--ui-muted)}.board-item{color:var(--ui-muted);border-radius:12px}.board-item.active{background:var(--ui-active);color:var(--ui-accent)}.board-item .delete{color:var(--ui-muted)}.side-foot{color:var(--ui-muted)}#workspace{background:var(--ui-bg)}.canvas-head{height:64px;padding:0 24px;gap:12px}.canvas-head input{color:var(--ui-text);font-size:19px;letter-spacing:-.3px}.head-controls label{color:var(--ui-muted)}.head-controls select{background:var(--ui-panel);color:var(--ui-text);border:1px solid var(--ui-line);border-radius:10px;padding:9px 10px;max-width:145px}#stage{background-color:var(--ui-canvas);background-image:none;border-top:1px solid var(--ui-line)}#tip{top:15px;background:var(--ui-panel);color:var(--ui-muted);border:1px solid var(--ui-line);box-shadow:var(--ui-shadow);padding:9px 15px}.toolbar{bottom:20px;max-width:calc(100% - 175px);background:var(--ui-panel);border:1px solid var(--ui-line);box-shadow:var(--ui-shadow);border-radius:18px;padding:7px;gap:3px;scrollbar-width:thin;scrollbar-color:var(--ui-line) transparent}.toolbar>button{color:var(--ui-text);width:42px;height:42px;border-radius:11px;font-size:21px}.toolbar>button.selected{background:var(--ui-active);color:var(--ui-accent)}.toolbar [data-tool="select"]{color:var(--ui-text)}.toolbar [data-tool="select"].selected{color:var(--ui-accent)}.separator{background:var(--ui-line);height:24px;margin:0 6px}.swatch.active{outline-color:var(--ui-accent)}.size-label{color:var(--ui-text)}.size-label input{accent-color:var(--ui-accent)}.zoom-tools{background:var(--ui-panel);border:1px solid var(--ui-line);box-shadow:var(--ui-shadow);border-radius:13px;bottom:24px}.zoom-tools button{color:var(--ui-text)}.zoom-tools button:hover{background:var(--ui-hover)}.zoom-tools span{color:var(--ui-text)}dialog{background:var(--ui-panel);color:var(--ui-text);border:1px solid var(--ui-line);box-shadow:var(--ui-shadow);border-radius:20px}dialog button{background:var(--ui-bg);color:var(--ui-text)}#editDialog textarea{background:var(--ui-bg);color:var(--ui-text);border:1px solid var(--ui-line)}.dialog-actions .primary,#confirmClear{background:var(--ui-accent);color:white}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--ui-accent)}
+@media(max-width:1100px){#saveStatus{display:none}.header-actions{gap:2px}.header-actions button{padding:9px}.toolbar{max-width:calc(100% - 15px);left:8px;transform:none}.zoom-tools{bottom:86px}}
+@media(max-width:900px){aside{top:0;width:224px;box-shadow:var(--ui-shadow)}#sidebarBtn{display:block}.toolbar{max-width:calc(100% - 16px);bottom:10px}.zoom-tools{bottom:84px}.canvas-head{padding:0 14px}}
+@media(max-width:680px){header{height:60px;padding:0 10px}.mark{width:36px;height:36px}.header-actions button{min-height:38px;padding:7px}.header-actions #backupBtn,.header-actions #importBtn,.header-actions #pdfBtn{display:none}.brand strong{font-size:16px}.canvas-head{height:54px}.canvas-head input{font-size:15px}.head-controls select{padding:7px;max-width:96px}.toolbar{width:calc(100% - 12px);left:6px;max-width:calc(100% - 12px);bottom:8px;padding:6px;overflow-x:auto}.toolbar>button{width:42px;height:42px;font-size:20px}.zoom-tools{bottom:78px;right:12px}#tip{display:none}}
+@media(max-width:430px){.header-actions #exportBtn{display:none}.brand{gap:7px}.header-actions{gap:0}.header-actions button{padding:6px}.canvas-head input{width:45%}}
+
+/* V0.3.2 — responsive touch-first toolbar; original drawing styles remain untouched */
+#mobileMenuBtn,.tool-categories{display:none}
+@media(max-width:900px){
+  .tool-categories{position:absolute;z-index:6;left:50%;transform:translateX(-50%);bottom:76px;display:flex;gap:4px;align-items:center;background:var(--ui-panel);border:1px solid var(--ui-line);border-radius:14px;padding:4px;box-shadow:var(--ui-shadow);max-width:calc(100% - 16px)}
+  .tool-categories button{border-radius:10px;background:transparent;color:var(--ui-muted);font-size:13px;font-weight:650;padding:9px 12px;min-height:40px;white-space:nowrap}
+  .tool-categories button.active{background:var(--ui-active);color:var(--ui-accent)}
+  .toolbar{z-index:6;left:50%;transform:translateX(-50%);bottom:10px;width:max-content;max-width:calc(100% - 16px);min-height:56px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;justify-content:flex-start}
+  .toolbar::-webkit-scrollbar{display:none}
+  .toolbar>[data-responsive-group]{display:none!important}
+  .toolbar>[data-responsive-group].group-visible{display:flex!important}
+  .toolbar>button[data-responsive-group].group-visible{display:block!important}
+  .toolbar>.separator{display:none!important}
+  .toolbar #colors.group-visible{display:flex!important}
+  .toolbar .size-label.group-visible{display:flex!important}
+  .toolbar>button{width:46px;height:46px;min-width:46px;font-size:22px}
+  .zoom-tools{bottom:151px;right:12px}
+  #mobileMenuBtn{display:inline-flex;align-items:center;justify-content:center;font-size:24px}
+  .header-actions.mobile-menu-open #importBtn,.header-actions.mobile-menu-open #backupBtn,.header-actions.mobile-menu-open #pdfBtn,.header-actions.mobile-menu-open #exportBtn{display:inline-flex!important}
+  .header-actions.mobile-menu-open{position:absolute;z-index:20;top:58px;right:8px;display:flex;flex-wrap:wrap;justify-content:flex-end;width:min(330px,calc(100vw - 16px));padding:9px;background:var(--ui-panel);border:1px solid var(--ui-line);border-radius:14px;box-shadow:var(--ui-shadow)}
+  .header-actions.mobile-menu-open button{min-width:40px}
+}
+@media(max-width:600px){
+  .tool-categories{bottom:75px;width:calc(100% - 16px);justify-content:space-around}
+  .tool-categories button{flex:1;padding:8px 5px;font-size:12px}
+  .toolbar{width:calc(100% - 12px);left:6px;transform:none;max-width:calc(100% - 12px);padding:5px;gap:5px}
+  .zoom-tools{bottom:148px}
+  .head-controls select{max-width:88px}
+  .toolbar .swatch{width:28px;height:28px}
+  .toolbar #colors{gap:10px}
+  .toolbar .size-label input{width:min(30vw,130px)}
+}
+@media(max-width:370px){.tool-categories button span{display:none}.tool-categories button{font-size:20px}}
+@media(pointer:coarse){.toolbar>button,.tool-categories button{touch-action:manipulation}.toolbar .swatch{min-width:27px;min-height:27px}}
