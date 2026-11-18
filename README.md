@@ -1,25 +1,16 @@
-# Quadro V0.2 — Touch & Notes
+# Quadro V0.3 — Select & Organize
 
-Aplicação web estática (HTML, CSS e JavaScript) para desenhar e tomar notas em dispositivos touch.
+Website estático para GitHub Pages. Abrir `index.html` ou publicar o conteúdo desta pasta.
 
-## Testar
+## Novidades
+- Seleção de elementos com ferramenta ⌗, arrastar para mover e puxar o quadrado inferior direito para redimensionar.
+- Duplicar, trazer para a frente, enviar para trás, bloquear/desbloquear e eliminar a seleção.
+- Ctrl+C / Ctrl+V para copiar e colar elementos; Delete para eliminar.
+- PDF pelo diálogo de impressão do browser (selecionar «Guardar como PDF»).
+- Histórico de alterações de objetos e migração dos quadros V0.2/V0.1 no mesmo domínio/browser.
 
-Abre `index.html` num browser moderno ou publica os ficheiros na raiz de um repositório com GitHub Pages (Settings > Pages > Deploy from a branch > main / root).
-
-## Novidades V0.2
-
-- Notas adesivas e caixas de texto: seleciona a ferramenta e toca no quadro; no modo Mão, toca para editar ou arrasta para mover.
-- Formas: retângulo, elipse e linha.
-- Fundos: pontilhado, liso, quadriculado e pautado; temas claro e escuro.
-- Exportação PNG, backup JSON e importação JSON.
-- Menu de quadros acessível em tablets e telemóveis.
-- Migração automática dos quadros da V0.1 guardados no mesmo domínio e browser.
-
-## Limitações atuais
-
-- Ainda sem login nem sincronização; os dados são guardados em localStorage no dispositivo.
-- Desfazer/refazer abrange criação de elementos e traços; alterações a notas existentes e movimentos não entram no histórico.
-- Exportação PNG usa fundo liso e recorta ao conteúdo; o padrão de fundo não é incluído.
-- Importar backup substitui os quadros existentes: exporta primeiro um backup.
-- Desenho com dedo e caneta; rejeição de palma depende do dispositivo/browser.
-- Sem service worker: para uso offline é necessário que os ficheiros estejam disponíveis localmente.
+## Limitações
+- Sem login nem sincronização: dados no armazenamento local do browser.
+- PDF abre a impressão numa janela separada; o browser pode pedir autorização para pop-ups.
+- Redimensionamento de elementos manuscritos e formas; rotação não está disponível nesta versão.
+- A migração local depende da origem do browser. Antes de substituir uma versão publicada, exportar um backup JSON.
