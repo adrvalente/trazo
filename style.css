@@ -278,3 +278,10 @@ body.topbar-auto-fade #topbar{opacity:0;pointer-events:none}
 body.focus-mode #topbarToggle{display:none!important}
 @media(max-width:680px){#topbarToggle{top:calc(env(safe-area-inset-top, 0px) + 11px);left:calc(env(safe-area-inset-left, 0px) + 10px);width:38px;height:38px;font-size:23px}body.topbar-hidden #topbarToggle{top:calc(env(safe-area-inset-top, 0px) + 10px);left:calc(env(safe-area-inset-left, 0px) + 10px)}}
 @media(prefers-reduced-motion:reduce){#topbar{transition:none!important}#topbarToggle{transition:none!important}}
+
+/* V0.3.5.11 — Radial Minimal: apenas os botões das ferramentas são visíveis.
+   A superfície vazia do menu não bloqueia o desenho nem os gestos touch. */
+.radial-wheel{background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;pointer-events:none!important;}
+.radial-wheel .radial-spokes{pointer-events:none!important;}
+.radial-wheel .radial-spoke{pointer-events:auto!important;box-shadow:0 6px 18px #0007;}
+.radial-caption,.radial-center{display:none!important;}

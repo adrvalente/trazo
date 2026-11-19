@@ -1,7 +1,7 @@
 /* Quadro V0.3.5.6 — Radial Toolbar; original controls and engine retained. */
 (()=>{
 'use strict';
-const root=document.getElementById('radialRoot'),fab=document.getElementById('radialFab'),wheel=document.getElementById('radialWheel'),spokes=document.getElementById('radialSpokes'),sub=document.getElementById('radialSub'),closeBtn=document.getElementById('radialClose');
+const root=document.getElementById('radialRoot'),fab=document.getElementById('radialFab'),wheel=document.getElementById('radialWheel'),spokes=document.getElementById('radialSpokes'),sub=document.getElementById('radialSub');
 const corner=document.getElementById('prefRadialCorner'),showFab=document.getElementById('prefRadialFab');
 const storageKey='quadro.radial.v0356';let prefs={corner:'bottom-right',fab:true};try{prefs={...prefs,...JSON.parse(localStorage.getItem(storageKey)||'{}')}}catch{}
 const categories=[['draw','✎','Desenhar'],['marker','▰','Marcador / Borracha'],['select','⌗','Selecionar'],['insert','▤','Inserir'],['shapes','▢','Formas'],['style','◉','Estilo'],['edit','⧉','Editar'],['view','⌖','Navegar']];
@@ -14,7 +14,7 @@ function resetTimer(){clearTimeout(timeout);if(opened)timeout=setTimeout(hide,30
 function hide(){opened=false;wheel.hidden=true;sub.hidden=true;fab.setAttribute('aria-expanded','false');clearTimeout(timeout)}
 function open(){opened=true;wheel.hidden=false;sub.hidden=true;fab.setAttribute('aria-expanded','true');resetTimer()}
 function toggle(){opened?hide():open()}
-fab.addEventListener('click',e=>{e.stopPropagation();toggle()});closeBtn.addEventListener('click',hide);
+fab.addEventListener('click',e=>{e.stopPropagation();toggle()});
 root.addEventListener('pointerdown',resetTimer);root.addEventListener('pointermove',e=>{if(e.buttons)resetTimer()});root.addEventListener('click',resetTimer);
 function execute(selector){const target=document.querySelector(selector);if(!target)return;target.click();hide()}
 function addAction(label,selector){const b=document.createElement('button');b.type='button';b.textContent=label;b.addEventListener('click',()=>execute(selector));sub.append(b)}

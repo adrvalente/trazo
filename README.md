@@ -1,8 +1,13 @@
-# Quadro V0.3.5.10 — Painel temporário
+# Quadro V0.3.5.11 — Radial Minimal
 
-Base: V0.3.5.8. Ao abrir a aplicação, o painel «Os meus quadros» aparece durante 5 segundos e fecha automaticamente com transição de 300 ms. O botão ☰ permite reabri-lo e fechá-lo normalmente. Se o utilizador interagir com o painel antes do fim da contagem, o fecho automático é cancelado.
+Base: V0.3.5.10 enviada pelo utilizador.
 
-Todas as funcionalidades e ficheiros do motor de desenho são preservados. Sem backend, compatível com GitHub Pages.
+## Alterações
+- Removido o botão central X do menu radial de ferramentas.
+- Removido o texto «Ferramentas» do círculo.
+- Removidos o fundo, contorno e sombra do disco radial, mantendo apenas os botões individuais.
+- A zona transparente entre botões deixa passar interações para o quadro.
+- Fechar: clicar fora, tecla Esc, botão flutuante ou após 3 segundos sem interação.
+- Mantidos os submenus, as posições configuráveis e o duplo toque/clique.
 
-## Cabeçalho temporário
-Ao abrir, a barra superior permanece visível 5 segundos e desaparece com fade-out de 300 ms. O botão com o logótipo ✎ permanece no canto superior esquerdo e alterna a visibilidade da barra. Se interagir com a barra durante os 5 segundos, a ocultação automática é cancelada. Não altera os dados nem o motor de desenho.
+Não foram alterados o motor app.js nem o armazenamento dos quadros. Compatível com GitHub Pages.
