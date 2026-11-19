@@ -255,3 +255,9 @@ html[data-pref-zoom="off"] .zoom-radial-root{display:none!important}
 body.zoom-radial-shift .zoom-radial-root{right:auto;left:18px}
 body.zoom-radial-shift .zoom-radial-wheel{right:auto;left:-5px}
 @media(max-width:550px){.zoom-radial-root{right:10px;bottom:10px}.zoom-radial-wheel{width:194px;height:194px}.zoom-radial-root.is-open .zoom-radial-fab{transform:translate(-75px,-75px)}body.zoom-radial-shift .zoom-radial-root{left:10px}}
+
+/* V0.3.5.8: dica apenas durante os primeiros 5 segundos */
+#tip.tip-intro{transition:opacity 300ms ease,visibility 300ms ease;pointer-events:none!important;}
+#tip.tip-intro.tip-fading{opacity:0!important;visibility:hidden!important;}
+#tip.tip-intro.tip-finished{display:none!important;}
+@media (prefers-reduced-motion:reduce){#tip.tip-intro{transition:none;}}
