@@ -1,16 +1,13 @@
-# Quadro V0.3.5.5 — UI Refinement
+# Quadro V0.3.5.6 — Radial Toolbar
 
-Base: V0.3.5.4. Compatível com GitHub Pages (ficheiros estáticos).
+Base: V0.3.5.5. Compatível com GitHub Pages (ficheiros estáticos).
 
-## Melhorias
-- Lista de quadros com cartões compactos, sem crescimento vertical exagerado ou scroll horizontal.
-- Barra inferior unificada, com menu de ferramentas adicionais no desktop.
-- Menu Ficheiro no desktop para Abrir, Backup, PDF e PNG.
-- Mantidos os botões originais e os seus eventos; motor app.js inalterado.
-- Layout responsivo para tablet e telemóvel.
+- Menu circular com oito categorias; submenus para ferramentas, edição e cores.
+- Oculta-se após 3 segundos de inatividade; o temporizador reinicia durante a interação.
+- Abre pelo botão flutuante ou duplo toque/clique na área de desenho.
+- Preferências: quatro cantos e visibilidade do botão flutuante, guardadas no browser.
+- Ferramentas e motor de desenho originais preservados, acionados pelos controlos existentes.
 
-## Instalação
-Publicar todos os ficheiros na raiz do repositório GitHub Pages ou abrir index.html localmente. Fazer backup JSON antes da atualização.
+**Nota:** Um primeiro toque isolado pode ainda deixar um ponto no quadro, dependendo da ferramenta. Para gestos sem qualquer marca acidental será necessária integração no motor de eventos do canvas. Testar especialmente com caneta e touch.
 
-## Notas
-O painel lateral usa ícones genéricos nos cartões, não miniaturas reais do conteúdo. Não foi alterado o formato de armazenamento dos quadros.
+Faz backup JSON antes de atualizar a aplicação. Não inclui login nem sincronização.
