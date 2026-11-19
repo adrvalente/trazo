@@ -235,3 +235,23 @@ body.focus-mode .more-tools-btn{display:none}
 @media(max-width:550px){.radial-root{right:10px;bottom:12px}.radial-root[data-corner$="left"]{left:10px}.radial-wheel{width:226px;height:226px}.radial-spoke{width:43px;height:43px;left:calc(50% - 21.5px);top:calc(50% - 21.5px)}.radial-sub{bottom:238px}.radial-root[data-corner^="top"] .radial-sub{top:238px}}
 body.focus-mode .radial-root{z-index:110}
 body.focus-mode.focus-tools-open #workspace .smart-toolbar-shell,body.focus-mode.focus-tools-open #workspace .tool-categories{display:none!important}
+
+/* V0.3.5.7 — Zoom radial: os controlos originais conservam IDs e listeners. */
+.zoom-radial-root{position:absolute;right:18px;bottom:18px;z-index:85;pointer-events:none;color:var(--ui-text)}
+.zoom-radial-root>*{pointer-events:auto}
+.zoom-radial-fab{width:54px;height:54px;border-radius:50%;background:var(--ui-panel);border:1px solid var(--ui-line);color:var(--ui-accent);font-size:26px;box-shadow:var(--ui-shadow);cursor:pointer;touch-action:manipulation}
+.zoom-radial-fab:hover,.zoom-radial-fab[aria-expanded="true"]{background:var(--ui-active);border-color:var(--ui-accent)}
+.zoom-radial-wheel{position:absolute;right:-5px;bottom:-5px;width:206px;height:206px;border-radius:50%;background:var(--ui-panel);border:1px solid var(--ui-line);box-shadow:0 14px 45px #0006}
+.zoom-radial-wheel[hidden]{display:none!important}
+.zoom-radial-wheel .zoom-tools{position:absolute!important;inset:0!important;display:block!important;transform:none!important;width:100%!important;height:100%!important;max-width:none!important;padding:0!important;margin:0!important;background:transparent!important;border:0!important;box-shadow:none!important;overflow:visible!important}
+.zoom-radial-wheel .zoom-tools button{position:absolute;display:grid;place-items:center;width:45px;height:45px;border-radius:50%;background:var(--ui-bg);border:1px solid var(--ui-line);color:var(--ui-text);font-size:23px;cursor:pointer;touch-action:manipulation}
+.zoom-radial-wheel #zoomIn{top:15px;left:calc(50% - 22.5px)}
+.zoom-radial-wheel #zoomOut{bottom:15px;left:calc(50% - 22.5px)}
+.zoom-radial-wheel #resetView{top:calc(50% - 22.5px);left:14px}
+.zoom-radial-wheel #zoomLabel{position:absolute;top:calc(50% - 16px);right:14px;width:66px;height:32px;display:grid;place-items:center;font-weight:700;font-size:14px;color:var(--ui-text)}
+.zoom-radial-root.is-open .zoom-radial-fab{position:relative;z-index:2;width:42px;height:42px;font-size:18px;transform:translate(-81px,-81px);background:var(--ui-accent);color:white}
+html[data-pref-zoom="off"] .zoom-radial-root{display:none!important}
+/* Evitar sobreposição quando o menu principal ocupa o canto inferior direito. */
+body.zoom-radial-shift .zoom-radial-root{right:auto;left:18px}
+body.zoom-radial-shift .zoom-radial-wheel{right:auto;left:-5px}
+@media(max-width:550px){.zoom-radial-root{right:10px;bottom:10px}.zoom-radial-wheel{width:194px;height:194px}.zoom-radial-root.is-open .zoom-radial-fab{transform:translate(-75px,-75px)}body.zoom-radial-shift .zoom-radial-root{left:10px}}
