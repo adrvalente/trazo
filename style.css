@@ -170,3 +170,7 @@ body.focus-mode .smart-toolbar-shell{display:none!important}
 body.focus-mode.focus-tools-open .smart-toolbar-shell{display:flex!important;bottom:16px}
 body.focus-mode.focus-tools-open .toolbar{display:flex!important}
 @media(max-width:900px){body.focus-mode.focus-tools-open .smart-toolbar-shell{bottom:10px}}
+
+/* V0.3.5.4 — novos controlos */
+#snapBtn[aria-pressed="true"]{background:var(--accent,#6366f1)!important;color:white!important;}
+#insertImageBtn,#snapBtn,.toolbar [data-tool="eyedropper"]{min-width:38px;}
