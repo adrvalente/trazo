@@ -285,3 +285,10 @@ body.focus-mode #topbarToggle{display:none!important}
 .radial-wheel .radial-spokes{pointer-events:none!important;}
 .radial-wheel .radial-spoke{pointer-events:auto!important;box-shadow:0 6px 18px #0007;}
 .radial-caption,.radial-center{display:none!important;}
+
+/* V0.3.5.12 — Zoom radial minimalista, sem disco nem botão X central. */
+.zoom-radial-wheel{background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;pointer-events:none!important}
+.zoom-radial-wheel .zoom-tools{pointer-events:none!important}
+.zoom-radial-wheel .zoom-tools button{pointer-events:auto!important;box-shadow:0 6px 18px #0005}
+.zoom-radial-root.is-open .zoom-radial-fab{visibility:hidden!important;pointer-events:none!important}
+.zoom-radial-wheel #zoomLabel{pointer-events:none!important;background:var(--ui-panel);border:1px solid var(--ui-line);border-radius:20px;box-shadow:0 6px 18px #0004}
