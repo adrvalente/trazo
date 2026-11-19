@@ -261,3 +261,7 @@ body.zoom-radial-shift .zoom-radial-wheel{right:auto;left:-5px}
 #tip.tip-intro.tip-fading{opacity:0!important;visibility:hidden!important;}
 #tip.tip-intro.tip-finished{display:none!important;}
 @media (prefers-reduced-motion:reduce){#tip.tip-intro{transition:none;}}
+
+/* V0.3.5.9 — transição de saída do painel inicial */
+#sidebar.sidebar-auto-fade{opacity:0;transition:opacity .3s ease;pointer-events:none}
+@media(prefers-reduced-motion:reduce){#sidebar.sidebar-auto-fade{transition:none}}
