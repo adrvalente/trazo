@@ -303,3 +303,7 @@ body.focus-mode #topbarToggle{display:none!important}
 .trazo-splash img{width:100%;height:100%;object-fit:contain;object-position:center;}
 .trazo-splash.is-closing{opacity:0;pointer-events:none;}
 @media(prefers-reduced-motion:reduce){.trazo-splash{transition:none;}}
+
+/* TRAZO V0.3.5.14 — remover logotipo duplicado da barra superior; texto +4px. */
+#topbar .brand .mark{visibility:hidden!important;}
+#topbar .brand > div:last-child{transform:translateX(4px);}
