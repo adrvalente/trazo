@@ -1,0 +1,2 @@
+/* TRAZO: remove o splash assim que a página estiver pronta, sem atraso artificial. */
+(()=>{const splash=document.getElementById('trazoSplash');if(!splash)return;let removed=false;function finish(){if(removed)return;removed=true;splash.classList.add('is-closing');setTimeout(()=>splash.remove(),320)}if(document.readyState==='complete')finish();else window.addEventListener('load',finish,{once:true});window.addEventListener('pageshow',e=>{if(e.persisted)finish()});})();

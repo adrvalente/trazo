@@ -1,0 +1,25 @@
+{
+  "name": "TRAZO — Dá forma às tuas ideias",
+  "short_name": "TRAZO",
+  "description": "Quadro digital para desenho e notas.",
+  "lang": "pt-PT",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080D1F",
+  "theme_color": "#080D1F",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

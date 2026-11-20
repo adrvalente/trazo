@@ -292,3 +292,14 @@ body.focus-mode #topbarToggle{display:none!important}
 .zoom-radial-wheel .zoom-tools button{pointer-events:auto!important;box-shadow:0 6px 18px #0005}
 .zoom-radial-root.is-open .zoom-radial-fab{visibility:hidden!important;pointer-events:none!important}
 .zoom-radial-wheel #zoomLabel{pointer-events:none!important;background:var(--ui-panel);border:1px solid var(--ui-line);border-radius:20px;box-shadow:0 6px 18px #0004}
+
+/* TRAZO V0.3.5.13 — Identidade Visual V1.0 */
+#topbarToggle{padding:4px;overflow:hidden;background:#080d1f;}
+#topbarToggle img{width:100%;height:100%;object-fit:cover;border-radius:9px;display:block;}
+#topbar .brand .mark{visibility:visible;pointer-events:none;background:transparent;box-shadow:none;padding:3px;}
+#topbar .brand .mark img{display:block;width:100%;height:100%;object-fit:cover;border-radius:9px;}
+#topbar .brand strong{letter-spacing:.08em;font-weight:800;}
+.trazo-splash{position:fixed;inset:0;z-index:9999;background:#080d1f;display:grid;place-items:center;opacity:1;transition:opacity .28s ease;pointer-events:all;}
+.trazo-splash img{width:100%;height:100%;object-fit:contain;object-position:center;}
+.trazo-splash.is-closing{opacity:0;pointer-events:none;}
+@media(prefers-reduced-motion:reduce){.trazo-splash{transition:none;}}
